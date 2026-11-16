@@ -1,0 +1,49 @@
+
+.conference-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.conference-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+.conference-img {
+  height: 210px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #1e293b;
+  font-size: 19px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .d-flex {
+  margin-top: auto;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: #6366f1;
+  border-color: #6366f1;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+@media (max-width: 576px) {
+  .conference-img {
+    height: 190px;
+  }
+}

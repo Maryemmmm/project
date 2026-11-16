@@ -1,0 +1,58 @@
+
+<div class="container py-5">
+
+  <!-- Page Header -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold display-5">Upcoming Conferences</h2>
+    <p class="text-muted">
+      Discover our latest events and join us!
+    </p>
+  </div>
+
+  <!-- Conference Cards -->
+  <div class="row g-4">
+
+    @for (conf of conferences; track conf.title) {
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card conference-card h-100 border-0 shadow-sm">
+
+          <img
+            [src]="conf.picture"
+            class="card-img-top conference-img"
+            [alt]="conf.title">
+
+          <div class="card-body p-4">
+
+            <h5 class="card-title fw-bold">
+              {{ conf.title }}
+            </h5>
+
+            <p class="text-muted mb-2">
+              📅 {{ conf.date }}
+            </p>
+
+            <p class="text-muted mb-3">
+              📍 {{ conf.address }}
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="badge bg-success-subtle text-success">
+                {{ conf.available_places }} places available
+              </span>
+
+              <button class="btn btn-primary btn-sm">
+                Details
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    }
+
+  </div>
+</div>
